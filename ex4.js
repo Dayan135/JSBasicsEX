@@ -1,4 +1,4 @@
-const grades = [73, 91, 88, 56, 62, 84, 95, 96, 88, 92 , 100, 30]
+const grades = [73, 91, 88, 56, 62, 84, 95, 96, 88, 92, 100]
 // your code goes here
 
 function compareNumbers(a, b) {
@@ -20,10 +20,8 @@ function findRange(arr){
 let range, median, secondRange;
 
 let secondHalfGrades = [];
-for(let i = 1; i <= Math.floor(grades.length / 2); i++){
-    //this loop creates a new array with the second half of the grades.
-    secondHalfGrades.push(grades[grades.length - i]);
-}
+secondHalfGrades = grades.slice(Math.floor((grades.length)/2));
+//creates a new array with the second half of the grades.
 
 secondRange = findRange(secondHalfGrades);
 range = findRange(grades);
