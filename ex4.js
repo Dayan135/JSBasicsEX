@@ -18,15 +18,16 @@ function findRange(arr){
 }
 
 let range, median, secondRange;
+
 let secondHalfGrades = [];
 for(let i = 1; i <= Math.floor(grades.length / 2); i++){
     //this loop creates a new array with the second half of the grades.
     secondHalfGrades.push(grades[grades.length - i]);
 }
+
 secondRange = findRange(secondHalfGrades);
 range = findRange(grades);
 median = grades.sort(compareNumbers)[Math.floor(grades.length / 2)]
-console.log(grades);
 
 console.log("Stats:\n");
 console.log("\tRange: " + range + "\n");
